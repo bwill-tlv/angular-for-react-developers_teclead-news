@@ -1,0 +1,19 @@
+<div class="news-article" *ngIf="!isLoading">
+  <div>
+    <div class="headline">
+      <a href="{{ article.url }}" target="_blank">{{ article.title }}</a>
+    </div>
+  </div>
+  <div class="description">
+    <div>
+      <span>{{ article.score }} points</span>
+      posted by
+      <span>{{ article.by }}</span>
+      <span
+        ><a>{{ article.date }}</a></span
+      >
+      |
+      <a>{{ article.descendants }} comments</a>
+    </div>
+  </div>
+</div>

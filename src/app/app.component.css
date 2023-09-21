@@ -1,26 +1,17 @@
-.page {
+body {
+  padding: 0 !important;
+}
+
+main {
+  font-family: "Roboto", sans-serif;
+  background: #f6f6ef;
+  height: 100%;
+  width: 100%;
+}
+
+.content {
+  color: white;
+  background-color: #31312f;
   width: 85%;
   margin: 0 auto;
-  background-color: #f6f5ef;
-  font-size: 10pt;
-  font-family: Verdana, Geneva, sans-serif;
-}
-
-.navbar {
-  background-color: #ff6600;
-  padding: 4px;
-}
-
-.navbar__items {
-  display: flex;
-}
-
-.item {
-  flex: 1;
-  color: #000;
-}
-
-.item a {
-  text-decoration: none;
-  color: #000;
 }
