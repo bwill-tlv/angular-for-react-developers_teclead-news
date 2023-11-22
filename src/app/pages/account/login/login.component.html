@@ -1,10 +1,29 @@
-<form class="form">
-  <h1>Login</h1>
-  <div class="container">
-    <input id="email" placeholder="Email" type="email" required />
-    <input id="email" placeholder="Password" type="password" required />
-    <button type="submit">Login</button>
-  </div>
-</form>
+<div *ngIf="isLoggedIn">
+  <p>You are already logged in.</p>
+</div>
+<div *ngIf="!isLoggedIn">
+  <form class="form" [formGroup]="loginForm" (submit)="onSubmit()">
+    <h1>Login</h1>
+    <div class="container">
+      <input
+        id="email"
+        placeholder="Email"
+        type="email"
+        formControlName="email"
+        required
+      />
+      <input
+        id="email"
+        placeholder="Password"
+        type="password"
+        formControlName="password"
+        required
+      />
+      <button type="submit" [disabled]="!loginForm.valid">Login</button>
+    </div>
+  </form>
 
-<p class="signupText">You don't have an account? <a href="#">Signup</a></p>
+  <p class="signupText">
+    You don't have an account? <a href="/account/signup">Signup</a>
+  </p>
+</div>

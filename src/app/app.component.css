@@ -4,14 +4,19 @@ body {
 
 main {
   font-family: "Roboto", sans-serif;
-  background: #f6f6ef;
+  background: #292926;
   height: 100%;
   width: 100%;
 }
 
-.content {
+.app-container {
   color: white;
   background-color: #31312f;
   width: 85%;
   margin: 0 auto;
+  height: 100%;
+}
+
+.content {
+  padding: 12px;
 }

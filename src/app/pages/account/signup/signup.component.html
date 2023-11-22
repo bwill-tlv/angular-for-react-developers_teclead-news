@@ -1,0 +1,31 @@
+<form class="form" [formGroup]="signupForm" (submit)="onSubmit()">
+  <h1>Signup</h1>
+  <div class="container">
+    <input
+      id="username"
+      placeholder="Username"
+      type="text"
+      formControlName="username"
+      required
+    />
+    <input
+      id="email"
+      placeholder="Email"
+      type="email"
+      formControlName="email"
+      required
+    />
+    <input
+      id="email"
+      placeholder="Password"
+      type="password"
+      formControlName="password"
+      required
+    />
+    <button type="submit" [disabled]="!signupForm.valid">Signup</button>
+  </div>
+</form>
+
+<p class="signupText">
+  You already have an account? <a href="account/login">Login</a>
+</p>

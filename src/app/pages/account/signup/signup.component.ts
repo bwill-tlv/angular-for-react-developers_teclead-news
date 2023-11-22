@@ -1,5 +1,4 @@
 import { CommonModule } from '@angular/common';
-import { HttpResponse } from '@angular/common/http';
 import { Component } from '@angular/core';
 import {
   FormControl,
@@ -7,18 +6,21 @@ import {
   ReactiveFormsModule,
   Validators,
 } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-login',
-  templateUrl: './login.component.html',
-  styleUrls: ['./login.component.css'],
+  selector: 'app-signup',
+  templateUrl: './signup.component.html',
+  styleUrls: ['./signup.component.css'],
   standalone: true,
   imports: [CommonModule, ReactiveFormsModule],
 })
-export class LoginComponent {
-  isLoggedIn = false;
-
-  loginForm = new FormGroup({
+export class SignupComponent {
+  signupForm = new FormGroup({
+    username: new FormControl('', [
+      Validators.required,
+      Validators.minLength(4),
+    ]),
     email: new FormControl('', [Validators.required, Validators.email]),
     password: new FormControl('', [
       Validators.required,
